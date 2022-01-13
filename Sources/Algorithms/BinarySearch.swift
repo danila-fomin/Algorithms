@@ -6,13 +6,13 @@
 
 import Foundation
 
-public func binarySearch<T: Comparable>(sortedCollection: [T], item: T) -> Int? {
+public func binarySearch<T: Comparable>(sortedArray: [T], item: T) -> Int? {
     var lowerBound = 0
-    var upperBound = sortedCollection.count - 1
+    var upperBound = sortedArray.count - 1
     
     while lowerBound <= upperBound {
         let middle = lowerBound + (upperBound - lowerBound) / 2
-        let guess = sortedCollection[middle]
+        let guess = sortedArray[middle]
         
         if guess == item {
             return middle
